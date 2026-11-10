@@ -1,0 +1,42 @@
+[
+  {
+    "name": "TearTicket",
+    "registry": "https://reactbits.dev/r/TearTicket-JS-CSS.json",
+    "retrieved": "2026-11-09",
+    "sha256": "6783761ac58141c0d0ff03fec3c980df716419fad8529d40c9272f860f689155",
+    "license": "MIT + Commons Clause, David Haz, 2026",
+    "integration": "Native DOM adaptation, not an official Vanilla release"
+  },
+  {
+    "name": "CircularCarousel",
+    "registry": "https://reactbits.dev/r/CircularCarousel-JS-CSS.json",
+    "retrieved": "2026-11-09",
+    "sha256": "3ee876e68695dc63fab76313bba564b18d4e178c5a5a731d22ea32a703f47169",
+    "license": "MIT + Commons Clause, David Haz, 2026",
+    "integration": "Native DOM adaptation, not an official Vanilla release"
+  },
+  {
+    "name": "RefineFrame",
+    "registry": "https://reactbits.dev/r/RefineFrame-JS-CSS.json",
+    "retrieved": "2026-11-09",
+    "sha256": "d70e05988d71222b52e52073a1d7c4fd88f57139e34e2edfbe45eb2b05d8332a",
+    "license": "MIT + Commons Clause, David Haz, 2026",
+    "integration": "Native DOM adaptation, not an official Vanilla release"
+  },
+  {
+    "name": "FlipCard",
+    "registry": "https://reactbits.dev/r/FlipCard-JS-CSS.json",
+    "retrieved": "2026-11-09",
+    "sha256": "5a5686e908e5ea026a58e5266c5586329f2667906997255b055e0e9ebdad3807",
+    "license": "MIT + Commons Clause, David Haz, 2026",
+    "integration": "Native DOM adaptation, not an official Vanilla release"
+  },
+  {
+    "name": "DitherVeil",
+    "registry": "https://reactbits.dev/r/DitherVeil-JS-CSS.json",
+    "retrieved": "2026-11-09",
+    "sha256": "6250d870f0c2eded6182859d7a1cfae5e8cd49158c2a2bf13d0eab5437d970cb",
+    "license": "MIT + Commons Clause, David Haz, 2026",
+    "integration": "Native DOM adaptation, not an official Vanilla release"
+  }
+]
