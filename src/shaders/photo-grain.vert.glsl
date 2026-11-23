@@ -1,0 +1,50 @@
+attribute vec3 letter;
+attribute vec3 shellPoint;
+attribute vec3 dye;
+attribute vec3 pigment;
+attribute vec2 grain;
+uniform float gather, flatten, elapsed, yaw, tilt, radius, wordWidth, pixelRatio, spacing;
+uniform vec2 wordCenter, photoSize;
+varying vec3 ink;
+varying float opacity;
+varying float softness;
+
+void main() {
+  float fromLeft = clamp(letter.x + .5, 0., 1.);
+  float g = smoothstep(.16 * fromLeft, .82 + .17 * fromLeft, gather);
+  float row = .5 - position.y;
+  float f = smoothstep(.13 * row, .85 + .13 * row, flatten);
+  float phase = grain.y * 6.283185;
+  vec3 n = shellPoint;
+  float wave = sin(3.6*n.x + 2.9*n.y + elapsed*.49) * cos(2.3*n.z - elapsed*.29);
+  n *= 1. + (.006*wave + .0028*sin(phase + elapsed*.65)) * g * (1.-f);
+  float angle = yaw + sin(g*3.14159) * (.37 + .16*n.y);
+  float c = cos(angle), s = sin(angle);
+  vec3 turned = vec3(c*n.x + s*n.z, n.y, -s*n.x + c*n.z);
+  c = cos(tilt); s = sin(tilt);
+  vec3 normal = vec3(turned.x, c*turned.y - s*turned.z, s*turned.y + c*turned.z);
+  float nearSide = smoothstep(-.92, .88, normal.z);
+  vec3 ball = normal * radius;
+  vec3 word = vec3(wordCenter + letter.xy * wordWidth, 0.);
+  float lift = sin(3.14159*g);
+  vec3 p = mix(word, ball, g);
+  p.y += radius * lift * (.13*normal.x + .15*sin(phase + 2.*letter.x));
+  p.x += radius * lift * (.09*normal.y + .045*cos(phase));
+  float bend = sin(f*3.14159);
+  p = mix(p, vec3(position.xy*photoSize, 0.), f);
+  p.x += radius * bend * (.19*normal.z + .09*sin(3.2*normal.y));
+  p.y += radius * bend * (.14*normal.x + .055*sin(phase));
+  p.z += radius * bend * .16*normal.z;
+
+  float sidelight = .91 + .13*dot(normalize(normal), normalize(vec3(-.48,.65,.62)));
+  vec3 rock = pigment * sidelight;
+  ink = mix(mix(vec3(.18 + .20*grain.y), rock, g), dye, f);
+  float body = spacing * (.60 + .85*grain.x) * (.88 + .19*nearSide);
+  float letterDot = min(1.6, spacing) * (.67 + .35*grain.x);
+  float diameter = mix(mix(letterDot, body, g), photoSize.x / max(1., radius*2.15/spacing)*1.27, f);
+  gl_PointSize = max(.85, diameter*pixelRatio);
+  opacity = mix(mix(.79, .53+.44*nearSide, g), .95, f);
+  opacity *= 1. - smoothstep(.76, .995, flatten);
+  softness = mix(.53,.75,nearSide);
+  gl_Position = projectionMatrix * modelViewMatrix * vec4(p,1.);
+}

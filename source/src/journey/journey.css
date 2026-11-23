@@ -1,0 +1,155 @@
+/* Journey surfaces are scoped; the original sculptural cover keeps its styling. */
+.intro-preview.journey-shell{--night:#0a1c2a;--paper:#e9e7dc;--mist:#a5b4bd;--chapter-accent:#aec8d7;position:fixed;inset:0;width:100%;height:100dvh;padding:0;overflow:hidden;background:var(--night);color:var(--paper);font-family:Manrope,'Microsoft YaHei',sans-serif;animation:none;isolation:isolate}
+.journey-shell[hidden],.journey-shell [hidden]{display:none!important}
+.journey-shell button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer;letter-spacing:inherit}
+.journey-shell button:focus-visible,.journey-shell [tabindex]:focus-visible{outline:1px solid #d4e6e9;outline-offset:6px}
+.journey-shell .journey-scene:focus{outline:none}
+.journey-shell button:disabled{opacity:.4;cursor:default}
+.station-atmosphere{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 51% 43%,#365b6c66,transparent 59%),linear-gradient(180deg,#0c1c2b,#162d3c 65%,#071825);z-index:-2}
+.station-atmosphere:before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0,transparent calc(16.666% - 1px),#cbdce60b 16.666%);mask-image:linear-gradient(transparent,#000 25%,#000 70%,transparent)}
+.station-horizon{position:absolute;inset:60% -25% -60%;background:repeating-radial-gradient(ellipse at 50% 0%,transparent 0,transparent 45px,#b5ccda14 46px,transparent 47px);transform:perspective(700px) rotateX(52deg);transform-origin:top;opacity:.7}
+.station-orbit{position:absolute;width:65vw;height:65vw;border:1px solid #c3d8df0c;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 7vw #b5cfda03,0 0 0 7.05vw #b5cfda0a,0 0 0 18vw #b5cfda02}
+.station-grain{position:absolute;inset:0;opacity:.11;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23n)' opacity='.65' d='M0 0h160v160H0z'/%3E%3C/svg%3E")}
+.journey-header{position:absolute;z-index:15;top:30px;left:4vw;right:4vw;display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.04em;height:40px}
+.journey-shell .back-cover{position:static;padding:12px 0;font:inherit;letter-spacing:.04em}
+.journey-edition{font-size:10px;letter-spacing:.18em;color:#b0bfc7}.journey-edition i{font-style:normal;padding:0 15px;opacity:.4}
+.journey-menu{display:flex;gap:24px;align-items:center;padding:12px 0;font-size:12px}.journey-menu span{font-size:19px;font-weight:300;transition:rotate .4s}.journey-menu[aria-expanded=true] span{rotate:45deg}
+.journey-shell #intro-heading.journey-word{position:absolute;z-index:-1;top:50%;left:50%;transform:none;translate:-50% -50%;margin:0;font:clamp(100px,13vw,190px)/.9 Georgia,serif;letter-spacing:-.06em;font-weight:400;color:#e4e7e2;pointer-events:none;transition:opacity .7s;text-shadow:1px 2px 1px #ffffff12,0 18px 32px #0002}
+.journey-word em{font-weight:400}.journey-shell[data-scene=ticket] #intro-heading{font-size:clamp(88px,10vw,138px);text-shadow:1px 2px 1px #ffffff16,0 9px 18px #0005}
+.scene-host,.journey-scene{position:absolute;inset:0;width:100%;height:100%;padding:0}
+.scene-heading{position:absolute;left:8%;right:8%;top:17%;text-align:center}
+.scene-eyebrow{font-size:10px;letter-spacing:.22em;color:#c6d3d8;margin-bottom:22px}
+.scene-title{font-family:'Microsoft YaHei',sans-serif;font-size:clamp(24px,2.8vw,40px);font-weight:400;letter-spacing:.12em;line-height:1.5}
+.scene-description{font-size:12px;line-height:1.8;color:#b3c1c8;letter-spacing:.1em;margin-top:16px}
+.journey-footer{position:absolute;left:4vw;right:4vw;bottom:27px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:9px;letter-spacing:.16em;color:#adbcc4;pointer-events:none}
+.journey-footer-note{font-size:11px;letter-spacing:.16em}.journey-coordinate{font-size:8px;opacity:.65}
+.ticket-pedestal{position:absolute;width:min(650px,80vw);left:50%;top:70%;translate:-50% -50%;filter:drop-shadow(0 38px 18px #0006)}
+.ticket-pedestal:after{content:'';position:absolute;z-index:-1;left:10%;right:10%;bottom:-40px;height:20px;background:#020b14;border-radius:50%;filter:blur(20px);opacity:.65}
+.ticket-mount{margin:auto}.boarding-face{position:relative;inset:0;height:100%;padding:26px 30px;background:repeating-linear-gradient(0deg,transparent 0,transparent 3px,#101c2c03 4px)}
+.boarding-top,.boarding-bottom{display:flex;justify-content:space-between;align-items:center;font-size:9px;letter-spacing:.1em}.boarding-top{border-bottom:1px solid #2b3d4b35;padding-bottom:17px}.boarding-route{display:flex;align-items:center;justify-content:space-between;margin:28px 0 25px;font-size:33px;letter-spacing:.12em}.boarding-route b{font-weight:400;white-space:nowrap}.boarding-track{display:flex;align-items:center;flex:1;margin:0 20px;font-size:14px}.boarding-track i{height:1px;background:#23374466;flex:1}.boarding-bottom span{line-height:1.9}.boarding-bottom strong{font-size:10px;font-weight:400;letter-spacing:.15em}.boarding-barcode{display:block;width:102px;height:27px;background:repeating-linear-gradient(90deg,#233744 0 1px,transparent 1px 4px,#233744 4px 7px,transparent 7px 10px,#233744 10px 11px,transparent 11px 13px);opacity:.8}
+.boarding-stub{height:100%;padding:26px 18px;display:flex;align-items:center;flex-direction:column;justify-content:space-between;text-align:center;font-size:8px;letter-spacing:.1em}.boarding-stub b{font-size:26px;font-weight:400;letter-spacing:.2em}.boarding-stub .stub-arrow{font-size:32px;line-height:1}.boarding-stub small{font-size:10px;line-height:1.7;letter-spacing:.05em}.tear-ticket__piece--stub:focus-visible{outline:none}.tear-ticket__piece--stub:focus-visible .tear-ticket__paper--stub{background:#eef0d8}
+.ticket-actions{position:absolute;left:0;right:0;bottom:10%;display:flex;align-items:center;justify-content:center;gap:8px;font-size:11px;letter-spacing:.08em;color:#b9c6cc}.text-action{padding:10px 0!important;border-bottom:1px solid #c7d1d566!important}.text-action:hover{color:#fff}
+.travel-shutter{position:absolute;z-index:14;inset:0;background:#142f42;display:grid;place-items:center;overflow:hidden}.travel-shutter:before,.travel-shutter:after{content:'';position:absolute;top:0;bottom:0;width:16%;border-left:2px solid #b0c6d44d;background:#0b1c2a;transform:skewX(-15deg)}.travel-shutter:before{left:12%}.travel-shutter:after{right:12%}.travel-shutter p{font-size:12px;letter-spacing:.25em;text-align:center}.travel-shutter p span{display:block;font-size:28px;margin-top:20px}.travel-lines{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 10%,#dae8f01a 10.1% 10.2%,transparent 10.3% 18%);transform:skewY(-8deg)}
+.carousel-orbit{position:absolute;left:8%;right:8%;top:31%;height:48%;filter:drop-shadow(0 35px 20px #0005)}.chapter-carousel{width:100%;height:100%}.journey-shell[data-scene=hub] #intro-heading{z-index:0;opacity:.16;top:48%}.journey-shell[data-scene=hub] .scene-heading{top:15%}.journey-shell[data-scene=hub] .scene-description{margin-top:12px}.station-selection{position:absolute;left:50%;top:80%;translate:-50% 0;display:grid;grid-template-columns:44px minmax(210px,300px) 44px;align-items:center;text-align:center;gap:0 24px}.station-count{font-size:9px;letter-spacing:.15em;color:#a9bdc9}.station-title{font-size:21px;font-weight:400;letter-spacing:.15em;margin:9px 0}.station-subtitle{font-size:11px;color:#b0bfc8}.journey-shell .circle-control{width:42px;height:42px;border:1px solid #c9d9e54d;border-radius:50%;font-size:16px;transition:background .25s,transform .25s}.circle-control:hover{background:#d6e4e21a;transform:scale(1.08)}.station-enter{grid-column:1/-1;justify-self:center;margin-top:17px;padding:8px 20px;font-size:11px;letter-spacing:.12em;border-bottom:1px solid #aabec266!important;transition:color .25s}.station-enter:hover{color:#fff}.circular-carousel__live,.journey-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.journey-index{position:absolute;z-index:14;right:4vw;top:86px;width:270px;padding:20px 25px;background:#183243f5;border:1px solid #8ca6b83d;box-shadow:0 20px 65px #0005;backdrop-filter:blur(20px)}.index-destination{display:block;width:100%;padding:17px 4px;text-align:left;font-size:12px!important;border-bottom:1px solid #acc3d027!important;letter-spacing:.1em!important}.index-destination:last-child{border:0!important;color:#b5c9d3}.index-destination:hover{padding-left:12px;background:#d4e2e608}
+.journey-shell[data-scene=chapter] .scene-heading{top:15%;text-align:left;left:8%;right:auto}.journey-shell[data-scene=chapter] .scene-eyebrow{margin-bottom:13px}.journey-shell[data-scene=chapter] .scene-title{font-size:30px}.journey-shell[data-scene=chapter] .scene-description{margin-top:10px}.chapter-back{position:absolute;right:8%;top:19%;font-size:12px;padding:10px 0}.chapter-layout{position:absolute;top:32%;bottom:13%;left:12%;right:10%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10vw;align-items:center}.chapter-art{height:100%;min-height:0;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center}.chapter-image.refine-frame{width:100%;height:100%;max-width:400px;aspect-ratio:auto;--rf-radius:3px;--rf-bg:#182a38;box-shadow:0 24px 55px #0005;position:relative}.chapter-image canvas{position:absolute;inset:0;width:100%;height:100%}.art-label{display:block;font-size:8px;letter-spacing:.16em;color:#9bafbb;margin-top:20px;white-space:nowrap}.chapter-copy{position:relative;min-width:0}.chapter-title{font-size:clamp(22px,2.2vw,32px);line-height:1.6;font-weight:400;letter-spacing:.05em;margin-bottom:22px}.chapter-body{font-size:12px;line-height:2.1;letter-spacing:.04em;color:#b2c0c8;max-width:34em}.chapter-entry{margin-top:35px;min-height:155px;border-top:1px solid #adc2d029;padding-top:24px}.entry-kicker{font-size:9px;letter-spacing:.12em;color:#b1c9d6}.entry-title{font-size:20px;font-weight:400;line-height:1.5;letter-spacing:.04em;margin:14px 0}.entry-body{font-size:12px;color:#adbfc9;line-height:1.9}.entry-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;font-size:9px;color:#bac9cd}.entry-tags span{border:1px solid #cad5d52b;padding:5px 8px}.entry-controls{display:flex;align-items:center;gap:24px;margin-top:20px}.entry-arrow{font-size:18px;width:36px;height:36px;border:1px solid #b0c2ce3b!important;border-radius:50%}.entry-count{font-size:9px;letter-spacing:.15em;color:#b0c2ce}.about-veil{position:absolute;inset:0;width:100%;height:100%;background-size:cover;background-position:center;cursor:crosshair}.about-veil:focus-visible{outline-offset:-6px!important}.record-front,.record-back{position:relative;width:100%;height:100%;padding:24px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center}.record-label{font-size:9px;letter-spacing:.16em}.record-front h5,.record-back h5{font:italic 25px Georgia,serif}.record-front small,.record-back small{font-size:10px;letter-spacing:.04em;opacity:.7}.record-back{justify-content:center;gap:25px}.record-back p{font-size:12px;line-height:1.9}.record-disc{width:140px;height:140px;border-radius:50%;background:repeating-radial-gradient(circle,#172a39 0 1px,#344452 2px,#172a39 3px 4px);display:grid;place-items:center;box-shadow:5px 10px 12px #0003}.record-disc i{width:48px;height:48px;border-radius:50%;background:#b8b8c3;display:grid;place-items:center;font:italic 16px Georgia;color:#172a39;border:1px solid #d6d6d9}.favorite-flip{width:100%!important;max-width:340px;height:260px!important}.chapter-copy:has(.favorite-flip) .chapter-entry{border:0;padding:0;margin-top:24px}.chapter-copy:has(.favorite-flip) .chapter-body{display:none}.chapter-copy:has(.favorite-flip) .chapter-title{font-size:24px;margin-bottom:12px}
+@media(min-width:1600px){.carousel-orbit{left:15%;right:15%;height:48%}.station-selection{top:78%}.ticket-pedestal{top:70%}.chapter-layout{left:18%;right:14%;gap:12vw}.chapter-image.refine-frame{max-width:470px}}
+@media(max-height:760px) and (min-width:761px){.scene-heading{top:14%}.scene-eyebrow{margin-bottom:10px}.scene-description{margin-top:8px}.ticket-pedestal{width:560px;top:70%}.ticket-actions{bottom:6%}.journey-footer{bottom:16px}.carousel-orbit{top:29%;height:47%}.station-selection{top:75%}.station-title{font-size:18px}.station-enter{margin-top:8px}.chapter-layout{top:31%;bottom:10%}.chapter-entry{margin-top:20px;padding-top:15px}.chapter-title{font-size:24px;margin-bottom:12px}.entry-title{font-size:18px}.favorite-flip{height:220px!important}.record-disc{width:105px;height:105px}}
+@media(max-width:760px){.journey-header{top:18px;left:24px;right:24px}.journey-edition{display:none}.journey-header .back-cover{font-size:11px}.journey-footer{left:24px;right:24px;bottom:20px;font-size:8px}.journey-coordinate,.journey-footer-note{display:none}.journey-footer:after{content:'LOGIC / VOL. 001';font-size:8px}.scene-heading{left:24px;right:24px;top:17%}.scene-title{font-size:23px;letter-spacing:.08em}.scene-description{font-size:11px;letter-spacing:.04em;margin-top:16px}.scene-eyebrow{font-size:9px;margin-bottom:22px}.journey-shell[data-scene=ticket] #intro-heading{font-size:100px}.ticket-pedestal{width:88%;top:71%}.ticket-actions{bottom:12%;font-size:10px}.boarding-face{padding:26px 30px}.station-orbit{width:115vw;height:115vw}.carousel-orbit{left:-18%;right:-18%;top:32%;height:43%}.station-selection{top:76%;grid-template-columns:36px 210px 36px;gap:0 8px}.station-title{font-size:21px}.station-subtitle{font-size:11px}.station-enter{margin-top:18px}.journey-shell[data-scene=hub] .scene-title{font-size:22px}.journey-shell[data-scene=hub] .scene-description{max-width:240px;margin:18px auto 0}.journey-shell[data-scene=hub] #intro-heading{font-size:130px}.journey-index{left:24px;right:24px;width:auto;top:74px}.journey-shell[data-scene=chapter]{overflow-y:auto;scrollbar-width:thin}.journey-shell[data-scene=chapter] .scene-host{position:relative;min-height:100%;height:auto}.journey-shell[data-scene=chapter] .journey-scene{position:relative;height:auto;min-height:100dvh;padding:116px 26px 110px}.journey-shell[data-scene=chapter] .scene-heading{position:relative;top:auto;left:auto;right:auto}.journey-shell[data-scene=chapter] .scene-title{font-size:28px}.journey-shell[data-scene=chapter] .scene-description{margin-top:8px}.chapter-back{position:relative;right:auto;top:auto;padding:14px 0;margin-top:12px;font-size:11px}.chapter-layout{position:relative;inset:auto;display:flex;flex-direction:column;gap:44px;margin-top:22px}.chapter-art{width:100%;height:300px}.chapter-image.refine-frame{max-width:none;width:100%;height:280px}.chapter-image img{object-position:center 42%}.art-label{font-size:7px;margin-top:12px}.chapter-copy{width:100%}.chapter-title{font-size:24px}.chapter-body{font-size:12px}.chapter-entry{min-height:155px;margin-top:28px}.chapter-copy:has(.favorite-flip) .chapter-title{font-size:23px}.favorite-flip{max-width:none;height:275px!important}.journey-shell[data-scene=chapter] .journey-footer{position:absolute;top:35px;left:50%;bottom:auto;right:auto;transform:translateX(-50%)}.journey-shell[data-scene=chapter] .journey-footer .journey-location{display:none}.journey-shell[data-scene=chapter] .journey-header{position:absolute}.journey-shell[data-scene=chapter] #intro-heading{position:fixed;z-index:-1}.entry-controls{justify-content:center}.travel-shutter p span{font-size:23px}}
+@media(max-height:650px) and (max-width:760px){.scene-heading{top:17%}.scene-eyebrow{margin-bottom:10px}.scene-description{margin-top:8px}.journey-shell[data-scene=ticket] #intro-heading{font-size:74px;top:47%}.ticket-pedestal{top:69%;width:78%}.ticket-actions{bottom:8%}.station-selection{top:74%}.station-title{margin:5px 0;font-size:17px}.station-enter{margin-top:8px}.carousel-orbit{top:34%;height:38%}.journey-shell[data-scene=hub] .scene-title{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.journey-shell *,.journey-shell *:before,.journey-shell *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Final composition refinement: a broad exhibition ring and quiet material grain. */
+.journey-shell .journey-word:focus{outline:none}
+.station-grain{opacity:.045}
+.station-orbit{box-shadow:0 0 0 7vw #b5cfda01,0 0 0 7.02vw #b5cfda0a,0 0 0 18vw #b5cfda01}
+.journey-shell[data-scene=hub] #intro-heading{z-index:3;top:50%;font-size:clamp(80px,8vw,120px);color:#f0f1e6;text-shadow:0 2px 16px #0a1b28b3;mix-blend-mode:screen}
+.journey-shell[data-scene=hub] .carousel-orbit{left:4%;right:4%;top:33%;height:46%}
+@media(max-width:760px){.journey-shell[data-scene=hub] .carousel-orbit{left:-23%;right:-23%;top:34%;height:40%}.journey-shell[data-scene=hub] #intro-heading{font-size:86px}}
+
+.journey-shell:is([data-scene=ticket],[data-scene=hub]) .station-atmosphere{background:#090b13;overflow:hidden}
+.celestial-sky{width:100%;height:100%;position:absolute;inset:0;animation:sidereal-drift 55s ease-in-out infinite alternate}
+@keyframes sidereal-drift{to{transform:scale(1.045) translateX(-.55%)}}
+.journey-shell:has(.celestial-sky) .station-atmosphere:before,.journey-shell:has(.celestial-sky) .station-orbit{display:none}
+.journey-shell:has(.celestial-sky) .station-horizon{inset:86% -30% auto;height:70%;transform:rotate(-7deg);border-radius:50%;background:linear-gradient(180deg,#2d2934,#090a11 12%);box-shadow:0 -1px 2px #e7d6bc,0 -5px 19px #dcc6af44,0 -18px 70px #afa2af22;opacity:.8}
+.journey-shell[data-scene=hub] .scene-heading{top:15%}
+.journey-shell[data-scene=hub] #intro-heading.journey-word{opacity:.19!important;z-index:-1}
+.celestial-map{position:absolute;inset:31% 6% 16%}
+.celestial-map svg{position:absolute;width:100%;height:100%;color:#dccfb14d;stroke-width:.8;stroke-dasharray:3 5}
+.journey-shell .atlas-star{position:absolute;transform:translate(-50%,-22px);min-width:70px;display:grid;justify-items:center;padding:0 3px 6px;text-shadow:0 2px 8px #000}
+.stellar-core{height:44px;width:44px;position:relative;display:grid;place-items:center;background:radial-gradient(circle,#fff 0 2px,#ffe6bf 3px,rgba(245,206,154,.5) 5px,transparent 48%);transition:transform .45s}
+.stellar-core:before,.stellar-core:after{content:'';position:absolute;width:40px;height:1px;background:linear-gradient(90deg,transparent,#fff3d9,transparent);transform:rotate(-12deg)}
+.stellar-core:after{transform:rotate(78deg);width:30px}
+.atlas-star:is(:hover,:focus-visible) .stellar-core{transform:scale(1.65)}
+.stellar-title{font:clamp(16px,1.6vw,25px)/1.7 Georgia,'SimSun',serif;letter-spacing:.13em;color:#f1e8d9}
+.stellar-name{font:9px/1.7 Georgia,serif;letter-spacing:.16em;color:#c9bbc0}
+.journey-shell .travel-shutter{background:radial-gradient(ellipse at center,#3e3845,#080912 68%)}
+.travel-shutter:before,.travel-shutter:after,.travel-lines{display:none}
+@media(max-width:600px){.celestial-map{inset:31% 3% 14%}.stellar-name{font-size:8px}.journey-shell .atlas-star{min-width:56px}}
+
+.sea-room{position:absolute;inset:0;z-index:-2;overflow:hidden;background:#d6cec2}
+.sea-layer,.sea-layer video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom;background-size:cover;background-position:center bottom}
+.sea-layer{transition:opacity .8s}
+.journey-shell:has(.sea-room) .station-atmosphere,.journey-shell[data-scene=hub] .journey-footer{display:none}
+.journey-shell:has(.sea-room){color:#242927}
+.journey-shell[data-light=night]{color:#fff3db}
+.journey-shell:has(.sea-room) .journey-header{padding:0 14px;border-radius:3px;background:#fffcf0cf;color:#253030}
+.journey-shell[data-light=night] .journey-header{background:#111923c9;color:#efe8da}
+.journey-shell .journey-edition{color:inherit;margin:auto}
+.journey-shell .sea-toggle{width:46px;height:40px;margin-left:auto;margin-right:18px;display:grid;place-items:center}
+.sea-toggle i{position:relative;width:25px;height:16px;overflow:hidden;border-bottom:1.5px solid currentColor}
+.sea-toggle i:before{content:'';position:absolute;width:12px;height:12px;border:1.5px solid currentColor;border-radius:50%;left:5px;top:1px;transition:transform .5s}
+.sea-toggle[aria-pressed=true] i:before{transform:translateY(10px)}
+.journey-shell[data-light=day] :is(.scene-description,.scene-eyebrow,.ticket-actions,.journey-footer){color:#293634}
+.journey-shell[data-light=day] .journey-index{color:#f5eee3}
+.journey-shell:has(.sea-room) #intro-heading.journey-word{color:inherit;text-shadow:none}
+.journey-shell[data-scene=hub] #intro-heading.journey-word{mix-blend-mode:normal;opacity:.48!important}
+.sea-books{position:absolute;bottom:min(3.5vh,1.97vw);left:50%;translate:-50% 0;height:clamp(115px,22vh,240px);display:flex;align-items:flex-end;gap:4px;perspective:1100px}
+.journey-shell .shelf-book{position:relative;display:block;padding:0;width:clamp(44px,3.9vw,70px);height:100%;--cloth:#485950;color:#fff0ce;transform-style:preserve-3d;transform-origin:left center;transition:translate .25s}
+.shelf-book:nth-child(2){height:90%;--cloth:#775247}.shelf-book:nth-child(3){height:96%;--cloth:#4f5964}.shelf-book:nth-child(4){height:87%;--cloth:#6e604e}
+.shelf-book:hover,.shelf-book:focus-visible{translate:0 -6px}.shelf-book.chosen{z-index:2}
+.cloth-spine,.cloth-cover{position:absolute;inset:0;background-color:var(--cloth);background-image:repeating-linear-gradient(0deg,transparent 0 2px,#fff1 3px),linear-gradient(90deg,#0005,transparent 14%,transparent 82%,#0005);box-shadow:inset 0 0 0 1px #392f2352,3px 3px 5px #271b1738}
+.cloth-spine{display:grid;place-items:center;writing-mode:vertical-rl;letter-spacing:.14em;font:clamp(14px,1.4vw,22px) Georgia,SimSun,serif;border-block:1px solid #cec3a644}
+.cloth-cover{inset:0 auto 0 100%;width:clamp(91px,13vh,145px);transform-origin:left;transform:rotateY(90deg);display:flex;flex-direction:column;justify-content:space-evenly;align-items:center;font-family:Georgia,SimSun,serif}
+.cloth-cover small{font-size:8px}.cloth-cover b{font-weight:400}.journey-shell[data-light=night] .sea-books{filter:brightness(.79)}
+.journey-shell[data-scene=chapter]{background:white;color:#242a29}
+.journey-shell[data-scene=chapter] .station-atmosphere{display:none}
+.journey-shell[data-scene=chapter] :is(.scene-description,.scene-eyebrow,.chapter-body,.entry-body,.entry-count,.entry-kicker,.entry-tags,.art-label,.journey-footer){color:#565f61}
+.journey-shell[data-scene=chapter] .journey-index{color:#fff}
+.journey-shell[data-scene=chapter] .chapter-entry{border-color:#d9dcda}
+.journey-shell[data-scene=chapter] .entry-tags span{border-color:#c8cfca}
+@media(max-aspect-ratio:16/9){.sea-books{bottom:3.5dvh}}
+@media(min-aspect-ratio:16/9){.sea-books{bottom:1.97vw}}
+
+/* Sea-window edition 02: room and shelf share the same frame geometry. */
+.journey-shell:has(.sea-room){--room-h:min(100dvh,56.49vw);background:#ded8cb}
+.journey-shell[data-light=night]{background:#1a191a}
+.sea-room{inset:auto;top:50%;left:50%;translate:-50% -50%;height:var(--room-h);width:min(100vw,177.03dvh);box-shadow:0 8px 30px #241d2024}
+.sea-room:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 45%,#61432e12)}
+.journey-shell:has(.sea-room) .journey-header{background:transparent;color:inherit;padding:0}
+.journey-shell:has(.sea-room) .journey-edition{display:none}
+.journey-shell:has(.sea-room) .journey-header button{background:#f4f0e6e6;color:#38372f;border-radius:3px;padding:8px 12px}
+.journey-shell[data-light=night] .journey-header button{color:#f3ece0;background:#211f22df}
+.sea-books{bottom:calc(50% - var(--room-h)*.465);height:clamp(96px,calc(var(--room-h)*.22),240px);gap:5px;perspective:1100px}
+.journey-shell .shelf-book{--depth:clamp(85px,13vh,145px);translate:none;transition:transform .45s cubic-bezier(.2,.75,.2,1);transform-origin:center bottom;isolation:auto}
+.journey-shell .shelf-book:nth-child(2){width:clamp(42px,3.3vw,61px)}
+.journey-shell .shelf-book:nth-child(3){width:clamp(45px,4.3vw,76px)}
+.cloth-cover{width:var(--depth);background-image:linear-gradient(90deg,#0004,transparent 7%,#0003 9%,transparent 11%),repeating-linear-gradient(92deg,transparent 0 2px,#ffffff0c 3px);border:2px solid var(--cloth);border-radius:0 3px 3px 0}
+.cloth-cover b{font:500 clamp(15px,1.5vw,22px) Georgia,SimSun,serif;letter-spacing:.06em}
+.cloth-spine{border-radius:3px;background-image:linear-gradient(90deg,#0005,transparent 20%,#fff1 55%,#0005),repeating-linear-gradient(6deg,transparent 0 2px,#ffffff10 3px);box-shadow:2px 3px 4px #33282055}
+.cloth-spine:after{content:'';position:absolute;inset:6% 14%;border-top:2px double #dfc797aa;border-bottom:2px double #dfc797aa}
+.shelf-book:before{content:'';position:absolute;left:2px;right:2px;top:1px;height:var(--depth);transform-origin:top;transform:rotateX(-90deg);background:repeating-linear-gradient(90deg,#cdc6ae 0 1px,#f2e9d3 1px 3px);border:1px solid var(--cloth)}
+@media(hover:hover){.shelf-book:hover{transform:translate3d(0,-3px,38px) rotateY(-9deg)}.shelf-book:has(+ .shelf-book:hover){transform:translateX(-5px) rotate(-1deg)}.shelf-book:hover + .shelf-book{transform:translateX(5px) rotate(1deg)}}
+.shelf-book:focus-visible{transform:translateZ(30px)}
+@media(max-aspect-ratio:1/1){.journey-shell:has(.sea-room){--room-h:100dvh}.sea-room{width:100vw}.sea-books{gap:6px;height:min(22dvh,165px)}}
+
+/* A single optical plane keeps both sky films registered to the wooden frame. */
+.sea-room{background:#d6cec2}
+.sea-plane{position:absolute;width:max(100%,177.03cqh);height:100%;bottom:0;left:50%;transform:translateX(-50%);background-size:100% 100%}
+.sea-room{container-type:size}
+.sea-plane .sea-layer{clip-path:inset(6.4% 4.45% 35.5% 4.25%);background-size:100% 100%}
+.sea-plane .sea-layer video{object-fit:fill}
+.journey-shell[data-light=night]:has(.sea-room){background:#ded8cb;color:#242927}
+.journey-shell[data-light=night] .sea-books{filter:none}
+.journey-shell[data-light=night]:has(.sea-room) .journey-header button{background:#f4f0e6e6;color:#38372f}
+.journey-shell[data-light=night] :is(.scene-description,.scene-eyebrow,.ticket-actions,.journey-footer){color:#293634}
+.sea-books{gap:clamp(1px,.16vw,3px);align-items:end}
+.journey-shell .sea-books .shelf-book{width:calc(clamp(22px,3vw,48px)*var(--thickness));height:var(--height);--ink:#e4d3ab;color:var(--ink)}
+.cloth-spine{writing-mode:horizontal-tb;display:flex;align-items:center;justify-content:center;border-radius:16% 13% 4% 4% / 2% 2% 1% 1%;background-image:linear-gradient(90deg,#21190877,transparent 16%,#fff2 37%,transparent 69%,#160e0766),repeating-linear-gradient(94deg,transparent 0 1px,#ffffff10 2px),repeating-linear-gradient(0deg,transparent 0 2px,#0002 3px)}
+.book-lettering{writing-mode:vertical-rl;white-space:nowrap;font:500 clamp(12px,min(1.25vw,2.1vh),20px)/1 Georgia,serif;letter-spacing:.025em;text-shadow:0 1px #0004}
+.cloth-cover b{padding:0 8%;text-align:center;font-family:Georgia,serif}
+.shelf-book[data-binding=paper],.shelf-book[data-binding=linen]:nth-child(2){--ink:#352d23!important}
+[data-binding=paper] .book-lettering{font-family:'Courier New',monospace;font-size:clamp(11px,1vw,15px)}
+[data-binding=paper] .cloth-spine:after{border:none}
+[data-binding=leather] .cloth-spine:after{inset:8% 3%;border-block:4px double #c3a46d;box-shadow:0 -2px 1px #0005,0 2px 1px #0006}
+[data-binding=marbled] :is(.cloth-spine,.cloth-cover){background-image:repeating-radial-gradient(ellipse at 15% 95%,transparent 0 6px,#c5af8260 7px,transparent 9px,#2224 12px),linear-gradient(90deg,#0005,transparent 25%,#fff1 60%,#0004)}
+[data-binding=marbled] .book-lettering,[data-binding=jacket] .book-lettering{background:#eee1c8;color:#383329;padding:7px 3px;text-shadow:none}
+[data-binding=jacket] .cloth-cover{background:linear-gradient(155deg,#404c5b 43%,#dfd5bd 43% 49%,#495562 49%)}
+@media(max-width:600px){.sea-books{gap:1px}.journey-shell .sea-books .shelf-book{width:calc(7.45vw * var(--thickness))}.book-lettering{font-size:13px}}
+.sea-books{height:clamp(110px,calc(var(--room-h)*.26),285px)}
+.journey-shell .sea-books .shelf-book{transition:transform .7s cubic-bezier(.2,.72,.2,1)}
+.journey-shell .sea-books .shelf-book.chosen{z-index:5;transform:translate3d(clamp(-50px,-4vw,-16px),-32px,80px) rotateY(-84deg)}
+.book-actions{position:absolute;bottom:calc(50% - var(--room-h)*.465 + clamp(110px,var(--room-h)*.26,285px) + 62px);left:50%;translate:-50% 0;display:flex;gap:4px;white-space:nowrap;background:#f4efdfef;color:#392e25;border-radius:4px;box-shadow:0 4px 18px #23181124}
+.book-actions button{padding:12px 16px;font-size:13px}
+.book-actions button:focus-visible{outline:2px solid #705e43;outline-offset:-4px}
+@media(max-width:600px){.sea-books{height:min(26dvh,195px)}.book-actions{bottom:calc(3.5dvh + min(26dvh,195px) + 62px)}.journey-shell .sea-books .shelf-book.chosen:nth-last-child(-n+2){transform:translate3d(-65px,-28px,52px) rotateY(-84deg)}}
